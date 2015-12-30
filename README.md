@@ -1,3 +1,5 @@
+## Select location(city/region/country) for NewsPuplisher (MODx Revolution)
+
 ## GL - Geo Location (MODx Revolution)
 
 ```

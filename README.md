@@ -20,7 +20,7 @@
 		&frontendCss=`[[+assetsUrl]]css/web/custom.css`
 	]]
 	```
-3. Create a TV with name City and **Geolocation type**
+3. Create a TV with name *City* and input type: **Геолокации** (gl)
 4. Call NewsPulisher snippet with **City** TV listed in **&show** property:
 	
 	```

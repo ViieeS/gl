@@ -11,6 +11,10 @@ $tmp = array(
 		'file' => 'modal',
 		'description' => '',
 	),
+	'tpl.gl.input' => array(
+		'file' => 'input',
+		'description' => 'NewsPublisher GeoLocation TV Template',
+	),
 );
 
 // Save chunks for setup options

@@ -1,4 +1,22 @@
-## Select location(city/region/country) for NewsPuplisher (MODx Revolution)
+## Select location(city/region/country) for [NewsPuplisher](http://modx.com/extras/package/newspublisher) (MODx Revolution)
+1. Create `gl.php` file in `/core/components/newspublisher/tvs/` with following content:
+
+	```php
+	<?php
+	$formTpl .= $this->_displaySimple($name,
+		'GeoLocationTpl', $this->textMaxlength);
+	```
+
+2. Create `npGeoLocationTpl` chunk with following content:
+
+	```
+	[[!gl.modal?
+		&class=`glCity`
+		&tpl=`tpl.gl.input`
+		&frontendJs=`[[+assetsUrl]]js/web/custom.js`
+		&frontendCss=`[[+assetsUrl]]css/web/custom.css`
+	]]
+	```
 
 ## GL - Geo Location (MODx Revolution)
 

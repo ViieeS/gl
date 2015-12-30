@@ -20,6 +20,8 @@
 		&frontendCss=`[[+assetsUrl]]css/web/custom.css`
 	]]
 	```
+	```&frontendCss=`[[+assetsUrl]]css/web/custom.css` ``` - optional for bootstrap theming
+	
 3. Create a TV with name *City* and input type: **Геолокации** (gl)
 4. Call NewsPulisher snippet with **City** TV listed in **&show** property:
 	

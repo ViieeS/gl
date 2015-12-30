@@ -1,4 +1,7 @@
 ## Select location(city/region/country) for [NewsPuplisher](http://modx.com/extras/package/newspublisher) (MODx Revolution)
+
+![NewsPulisher select location sample](http://i75.fastpic.ru/big/2015/1230/db/bcabca85303fe2964ff2e920f43510db.png)
+
 1. Create `gl.php` file in `/core/components/newspublisher/tvs/` with following content:
 
 	```php
@@ -15,6 +18,15 @@
 		&tpl=`tpl.gl.input`
 		&frontendJs=`[[+assetsUrl]]js/web/custom.js`
 		&frontendCss=`[[+assetsUrl]]css/web/custom.css`
+	]]
+	```
+3. Create a TV with name City and **Geolocation type**
+4. Call NewsPulisher snippet with **City** TV listed in **&show** property:
+	
+	```
+	[[!NewsPublisher?
+		&show=`pagetitle,description,City,..`
+		...
 	]]
 	```
 

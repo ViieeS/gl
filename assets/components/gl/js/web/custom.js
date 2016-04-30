@@ -1,7 +1,9 @@
 /**
- * Set input for NewsPublisher
- * @version 1.0.0
- */
+ * update for default.js v 1.1.9
+ *
+ * with colorbox
+ *
+ * */
 
 if (typeof(gl) == 'undefined') {
     gl = {
@@ -10,16 +12,18 @@ if (typeof(gl) == 'undefined') {
 }
 
 gl = {
-    initialize: function () {
+    initialize: function() {
         if (!jQuery().colorbox) {
-            document.write('<script src="' + glConfig.assetsUrl + 'vendor/colorbox/jquery.colorbox-min.js"><\/script>');
-            document.write('<script src="' + glConfig.assetsUrl + 'vendor/colorbox/i18n/jquery.colorbox-ru.js"><\/script>');
+            document.writeln('<style data-compiled-css>@import url('+glConfig.assetsUrl + 'vendor/colorbox/example1/colorbox.css); </style>');
+            document.writeln('<script src="' + glConfig.assetsUrl + 'vendor/colorbox/jquery.colorbox-min.js"><\/script>');
+            document.writeln('<script src="' + glConfig.assetsUrl + 'vendor/colorbox/i18n/jquery.colorbox-ru.js"><\/script>');
         }
         if (!jQuery().select2) {
-            document.write('<script src="' + glConfig.assetsUrl + 'vendor/select2/js/select2.min.js"><\/script>');
-            document.write('<script src="' + glConfig.assetsUrl + 'vendor/select2/js/i18n/ru.js"><\/script>');
+            document.writeln('<style data-compiled-css>@import url('+glConfig.assetsUrl + 'vendor/select2/dist/css/select2.min.css); </style>');
+            document.writeln('<script src="' + glConfig.assetsUrl + 'vendor/select2/dist/js/select2.min.js"><\/script>');
+            document.writeln('<script src="' + glConfig.assetsUrl + 'vendor/select2/dist/js/i18n/ru.js"><\/script>');
         }
-        $(document).ready(function () {
+        $(document).ready(function() {
 
         });
         gl.Init = true;
@@ -59,6 +63,10 @@ gl.location = {
 
     setDefaults: function (key) {
         var inputValue = this.getInputValue();
+
+        if(!inputValue){
+            return false;
+        }
 
         this.locations = inputValue.split(', ');
         var field = $('[name="' + key + '"]');
